@@ -14,8 +14,9 @@ a = Synth(\sampy, [\buf, b] );
 OSCdef( \playsamp, {
 	arg msg;
 	var sampnum = msg[1].asInteger;
+	msg.postln;
 	Synth(\sampy, [\buf, sampnum] );
-}, "/button1" );
+}, "1/push1" );
 
 n = NetAddr("127.0.0.1", 57120);
 
